@@ -1,6 +1,6 @@
 # LLM Agent Gateway / Agent Runtime
 
-一个以单文件实现为核心的个人项目，用来展示我如何从零设计并实现一个可运行的 LLM Agent Runtime。仓库中的核心入口是 [workspace/claw.py](workspace/claw.py)：它把 **Agent Loop、Tool Calling、Memory、Gateway Routing、Session Isolation、Heartbeat/Cron、Delivery Queue、Failover、Named-Lane Concurrency** 串成了一个完整的可执行系统。
+一个以单文件实现为核心的个人项目，用来展示我如何从零设计并实现一个可运行的 LLM Agent Runtime。仓库中的核心入口是 [agent.py](agent.py)：它把 **Agent Loop、Tool Calling、Memory、Gateway Routing、Session Isolation、Heartbeat/Cron、Delivery Queue、Failover、Named-Lane Concurrency** 串成了一个完整的可执行系统。
 
 这个实现是一个 **interview-study gateway / runnable architecture scaffold**：当前默认使用 `MockLLM`，可以离线运行，不依赖真实外部模型服务；但整体代码结构、状态流转、故障处理和模块边界，都是按真实 Agent Gateway / Agent Runtime 的思路组织的，适合作为 GitHub 项目展示、面试讲解样例，以及后续演进成真实服务的基础。
 
